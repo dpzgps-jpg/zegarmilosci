@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Regresivo - San Valentín</title>
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="nword.css">
+</head>
+<body>
+
+    <!-- Fondo decorativo con corazones y nubes -->
+    <div class="heart h1"></div>
+    <div class="heart h2"></div>
+    <div class="heart h3"></div>
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+
+    <div class="container">
+        <!-- Título superior -->
+        <h2 class="title-top">Faltan</h2>
+
+        <!-- Rejilla de contadores -->
+        <div class="countdown-grid">
+            
+            <!-- Días -->
+            <div class="card">
+                <div class="card-number" id="days">00</div>
+                <div class="card-label">Días</div>
+            </div>
+
+            <!-- Horas -->
+            <div class="card">
+                <div class="card-number" id="hours">00</div>
+                <div class="card-label">Horas</div>
+            </div>
+
+            <!-- Minutos -->
+            <div class="card">
+                <div class="card-number" id="minutes">00</div>
+                <div class="card-label">Minutos</div>
+            </div>
+
+            <!-- Segundos -->
+            <div class="card">
+                <div class="card-number" id="seconds">00</div>
+                <div class="card-label">Segundos</div>
+            </div>
+
+        </div>
+
+        <!-- Título inferior -->
+        <div class="title-bottom">
+            <span>para el</span>
+            <h1 class="target-name">Día de San Valentín!</h1>
+        </div>
+    </div>
+
+    <!-- Archivo JS -->
+    <script src="mpalabra.js"></script>
+</body>
 </html>
