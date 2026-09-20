@@ -1,20 +1,21 @@
-// Función para obtener la fecha del próximo 14 de Febrero
-function getNextValentineDate() {
+// Fecha objetivo: 18 de diciembre a las 23:00:00
+// Nota: En JavaScript los meses van de 0 a 11 (11 = Diciembre)
+function getTargetDate() {
     const now = new Date();
     let currentYear = now.getFullYear();
     
-    // Crear fecha del 14 de Febrero a las 00:00:00
-    let valentineDate = new Date(currentYear, 1, 14, 0, 0, 0);
+    // Crear fecha para el 18 de Diciembre a las 23:00:00
+    let target = new Date(currentYear, 11, 18, 23, 0, 0);
 
-    // Si este año San Valentín ya pasó, calcula para el siguiente año
-    if (now > valentineDate) {
-        valentineDate = new Date(currentYear + 1, 1, 14, 0, 0, 0);
+    // Si la fecha ya pasó este año, calcula para el siguiente año
+    if (now > target) {
+        target = new Date(currentYear + 1, 11, 18, 23, 0, 0);
     }
 
-    return valentineDate;
+    return target;
 }
 
-const targetDate = getNextValentineDate();
+const targetDate = getTargetDate();
 
 function updateCountdown() {
     const now = new Date();
@@ -35,7 +36,7 @@ function updateCountdown() {
     const seconds = Math.floor((difference / 1000) % 60);
 
     // Actualizar elementos en el HTML agregando un "0" inicial si es menor a 10
-    document.getElementById('days').innerText = days;
+    document.getElementById('days').innerText = days < 10 ? '0' + days : days;
     document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
     document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
     document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
