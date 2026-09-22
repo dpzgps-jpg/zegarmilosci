@@ -22,6 +22,7 @@ body {
     z-index: 0;
     pointer-events: none;
     object-fit: contain;
+    mix-blend-mode: multiply;
 }
 
 /* Posiciones y tamaños ajustados para cada corazón */
