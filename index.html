@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- AÑADE ESTA LÍNEA PARA EVITAR MODO OSCURO EN MÓVILES -->
+    <meta name="color-scheme" content="light only">
+
     <title>ZEGAR</title>
     <!-- Fuentes de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
-    <!-- Archivo CSS -->
-    <link rel="stylesheet" href="nword.css?v=1.3">
+    
+    <!-- Archivo CSS (AÑADE ?v=1.3 AL FINAL PARA FORZAR ACTUALIZACIÓN) -->
+    <link rel="stylesheet" href="nword.css?v=1.4">
 </head>
 <body>
 
@@ -23,42 +28,43 @@
         <!-- Título superior -->
         <h2 class="title-top">Brakuje</h2>
 
-<!-- Rejilla de contadores principal -->
-<div class="countdown-grid">
-    <div class="card">
-        <div class="card-number" id="days">00</div>
-        <div class="card-label">Dni</div>
-    </div>
+        <!-- Rejilla de contadores principal -->
+        <div class="countdown-grid">
+            <div class="card">
+                <div class="card-number" id="days">00</div>
+                <div class="card-label">Dni</div>
+            </div>
 
-    <div class="card">
-        <div class="card-number" id="hours">00</div>
-        <div class="card-label">Godzin</div>
-    </div>
+            <div class="card">
+                <div class="card-number" id="hours">00</div>
+                <div class="card-label">Godzin</div>
+            </div>
 
-    <div class="card">
-        <div class="card-number" id="minutes">00</div>
-        <div class="card-label">Minut</div>
-    </div>
+            <div class="card">
+                <div class="card-number" id="minutes">00</div>
+                <div class="card-label">Minut</div>
+            </div>
 
-    <div class="card">
-        <div class="card-number" id="seconds">00</div>
-        <div class="card-label">Sekund</div>
-    </div>
-</div>
+            <div class="card">
+                <div class="card-number" id="seconds">00</div>
+                <div class="card-label">Sekund</div>
+            </div>
+        </div>
 
-<!-- NUEVA BARRA DE PROGRESO -->
-<div class="progress-container">
-    <div class="progress-bar-background">
-        <div class="progress-bar-fill" id="progress-fill"></div>
-    </div>
-    <div class="progress-text" id="progress-text">0%</div>
-</div>
+        <!-- AÑADE AQUÍ LA BARRA DE PROGRESO -->
+        <div class="progress-container">
+            <div class="progress-bar-background">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-text" id="progress-text">0%</div>
+        </div>
 
-<!-- Título inferior -->
-<div class="title-bottom">
-    <span></span>
-    <h1 class="target-name">Żeby Cię zobaczyć skarbie!</h1>
-</div>
+        <!-- Título inferior -->
+        <div class="title-bottom">
+            <span></span>
+            <h1 class="target-name">Żeby Cię zobaczyć skarbie!</h1>
+        </div>
+    </div>
 
     <!-- Archivo JS -->
     <script src="mpalabra.js"></script>
