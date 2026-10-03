@@ -39,7 +39,7 @@ body {
 }
 
 .h1 { 
-    top: 10%; 
+    top: 4%; 
     left: 8%; 
     width: 80px; 
     height: auto;
@@ -47,7 +47,7 @@ body {
 }
 
 .h2 { 
-    top: 12%; 
+    top: 6%; 
     right: 12%; 
     width: 100px; 
     height: auto;
@@ -56,7 +56,7 @@ body {
 
 .h3 { 
     bottom: 12%; 
-    left: 6%; 
+    left: 2%; 
     width: 110px; 
     height: auto;
     transform: rotate(-10deg);
