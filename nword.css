@@ -6,12 +6,15 @@
 
 body {
     min-height: 100vh;
+    min-height: 100dvh; /* Para adaptarse a las barras de navegación en pantallas móviles */
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Nunito', sans-serif;
-    background: linear-gradient(180deg, #ffc0cb 0%, #ffe6ea 100%);
-    overflow: hidden;
+    /* Tono inicial más suave y pastel, terminando en un blanco puro (#ffffff) */
+    background: linear-gradient(180deg, #ffe0e6 0%, #fff5f7 55%, #ffffff 100%);
+    background-attachment: fixed; /* Mantiene el degradado fijo en pantalla */
+    overflow-x: hidden;
     position: relative;
     padding: 20px;
 }
