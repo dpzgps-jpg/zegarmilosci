@@ -10,12 +10,39 @@ function getTargetDate() {
     return target;
 }
 
+// Fecha de inicio: 3 de septiembre a las 00:00:00
+function getStartDate(targetDate) {
+    const year = targetDate.getFullYear();
+    return new Date(year, 8, 3, 0, 0, 0); // Mes 8 = Septiembre
+}
+
 const targetDate = getTargetDate();
+const startDate = getStartDate(targetDate);
 
 function updateCountdown() {
     const now = new Date();
     const difference = targetDate - now;
 
+    // Cálculo del porcentaje de progreso
+    const totalDuration = targetDate - startDate;
+    const elapsed = now - startDate;
+
+    let percentage = 0;
+    if (elapsed > 0) {
+        percentage = (elapsed / totalDuration) * 100;
+    }
+    if (percentage > 100) percentage = 100;
+
+    // Actualizar barra y texto de porcentaje
+    const progressFill = document.getElementById('progress-fill');
+    const progressText = document.getElementById('progress-text');
+
+    if (progressFill && progressText) {
+        progressFill.style.width = percentage.toFixed(2) + '%';
+        progressText.innerText = percentage.toFixed(2) + '%';
+    }
+
+    // Contador a cero si ya pasó el tiempo
     if (difference <= 0) {
         document.getElementById('days').innerText = "00";
         document.getElementById('hours').innerText = "00";
